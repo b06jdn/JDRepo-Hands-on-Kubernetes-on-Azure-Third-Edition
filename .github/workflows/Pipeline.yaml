@@ -37,7 +37,18 @@ jobs:
         uses: Azure/login@v1.4.5
         with:
     # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-         creds: ${{ secrets:AZURE_CREDENTIALS }}
+         creds: ${{ secrets:{
+  "clientId": "054e8d5d-b427-4f6d-8f2e-9e4d7d222565",
+  "clientSecret": "Taw8Q~Qm4No~LUJlZUfmDJRUaieTO6AdfI3QjcGg",
+  "subscriptionId": "510d989d-a0cd-47d3-8efe-90981f35f57c",
+  "tenantId": "095db4f0-871a-4f9f-905a-27d275de7b1c",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+} }}
          
       - name: ACR login
         run: az acr login -n $ACRNAME
