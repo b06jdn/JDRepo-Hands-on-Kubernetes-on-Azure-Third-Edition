@@ -14,8 +14,8 @@ on:
     branches: [ "main" ]
   
   # Env to set reusable variables
-  env:
-    ACRNAME: jdhandsonakspipeline
+#  Env:
+ #   ACRNAME: jdhandsonakspipeline
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
